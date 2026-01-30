@@ -1105,25 +1105,30 @@ body {
 /* Responsive Design */
 
 /* Tablet and below (768px) */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
+  :root {
+    --spacing-xl: 1.5rem;
+    --spacing-2xl: 2rem;
+  }
+
   /* Header */
   .app-header {
-    padding: var(--spacing-md) var(--spacing-lg);
+    padding: var(--spacing-md) var(--spacing-lg) !important;
   }
 
   .header-content {
-    flex-direction: column;
+    flex-direction: column !important;
     gap: var(--spacing-md);
-    align-items: flex-start;
+    align-items: flex-start !important;
   }
 
   .app-title {
-    font-size: 1.2rem;
+    font-size: 1.2rem !important;
   }
 
   .header-actions {
-    width: 100%;
-    justify-content: space-between;
+    width: 100% !important;
+    justify-content: space-between !important;
   }
 
   .user-email {
@@ -1132,17 +1137,17 @@ body {
 
   /* Layout */
   .main-container {
-    flex-direction: column;
+    flex-direction: column !important;
   }
 
   .sidebar {
-    width: 100%;
-    border-right: none;
+    width: 100% !important;
+    border-right: none !important;
     border-bottom: 1px solid var(--border-color);
   }
 
   .nav-menu {
-    flex-direction: row;
+    flex-direction: row !important;
     overflow-x: auto;
     padding: var(--spacing-sm);
     -webkit-overflow-scrolling: touch;
@@ -1155,23 +1160,23 @@ body {
   }
 
   .main-content {
-    padding: var(--spacing-lg);
+    padding: var(--spacing-lg) !important;
   }
 
   /* Dashboard */
   .page-header {
-    flex-direction: column;
+    flex-direction: column !important;
     gap: var(--spacing-md);
-    align-items: flex-start;
+    align-items: flex-start !important;
   }
 
   .page-header h1 {
-    font-size: 1.5rem;
+    font-size: 1.5rem !important;
   }
 
   .dashboard-cards {
-    grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-md);
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: var(--spacing-md) !important;
   }
 
   .stat-card {
@@ -1274,20 +1279,24 @@ body {
 
   /* Login Page */
   .login-page {
-    flex-direction: column;
+    flex-direction: column !important;
+    min-height: 100vh !important;
   }
 
   .login-welcome {
-    display: none;
+    display: none !important;
   }
 
   .login-form-wrapper {
-    padding: var(--spacing-lg);
-    min-height: 100vh;
+    flex: 1 !important;
+    padding: var(--spacing-lg) !important;
+    min-height: 100vh !important;
+    width: 100% !important;
   }
 
   .login-form {
-    padding: var(--spacing-lg);
+    padding: var(--spacing-lg) !important;
+    max-width: 100% !important;
   }
 
   .login-form h2 {
@@ -1307,34 +1316,34 @@ body {
 }
 
 /* Mobile (480px and below) */
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
   /* Header */
   .app-header {
-    padding: var(--spacing-sm) var(--spacing-md);
+    padding: var(--spacing-sm) var(--spacing-md) !important;
   }
 
   .app-title {
-    font-size: 1rem;
+    font-size: 1rem !important;
   }
 
   .header-actions {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: column !important;
+    align-items: flex-start !important;
     gap: var(--spacing-sm);
   }
 
   /* Content */
   .main-content {
-    padding: var(--spacing-md);
+    padding: var(--spacing-md) !important;
   }
 
   .page-header h1 {
-    font-size: 1.25rem;
+    font-size: 1.25rem !important;
   }
 
   /* Dashboard Cards - Single column on mobile */
   .dashboard-cards {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
   }
 
   /* Cards */
